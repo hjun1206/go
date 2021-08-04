@@ -1,4 +1,7 @@
 // lru 算法 简单实现
+// 效果: 实现缓存，缓存大小固定为某个值
+// 设置key的时候，需要判断内存大小,超过内存值，则淘汰最长时间未使用 key
+// 获取key的时候，需要更新key排序
 
 package main
 
@@ -93,5 +96,4 @@ func main() {
 	if v, ret := lru.Get("50"); ret {
 		fmt.Println("Get(50) : ", v)
 	}
-
 }
